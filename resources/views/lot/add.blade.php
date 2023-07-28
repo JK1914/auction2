@@ -10,7 +10,6 @@
 
 <body>
 
-
     <div class="container">
         <div class="">            
                 <form method="post" action="/add" enctype="multipart/form-data">
@@ -40,7 +39,6 @@
                     </div>
                 </form>            
         </div>
-
     </div>
 
 </body>

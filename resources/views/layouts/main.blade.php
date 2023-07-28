@@ -22,7 +22,7 @@
                             @if (Route::has('login'))
                             @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="">Текущие</a>
+                                <a class="nav-link" href="{{route('current')}}">Текущие</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('winlots')}}">Выигранные</a>
@@ -59,7 +59,13 @@
 
         </div>
 
-        @yield('content')   
+        @if ($message = session()->get('success'))
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>{{ $message }}</strong>             
+        </div>        
+        @endif
+
+        @yield('content')
 
         <!-- <form action="{{route('search')}}">
             <div class="input-group mb-3">

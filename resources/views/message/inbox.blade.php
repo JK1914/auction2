@@ -10,7 +10,7 @@
 <table class="table">
                 <thead>
                     <tr>                        
-                        <th scope="col">Имя</th>  
+                        <th scope="col">Заголовок</th>  
                         <th scope="col">Текст</th>  
                         <th scope="col">Время</th>  
                     </tr>

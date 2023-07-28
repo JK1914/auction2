@@ -18,7 +18,9 @@
                     <tr>                       
                         <td> {{$user->name}}
                             <div style="display: inline-block;">  
-                                <a href="{{ route('block', $user->id) }}" class="btn btn-primary">Заблокировать</a>
+                                <a href="{{ route('block', $user->id) }}" class="btn btn-primary">
+                                    Заблокировать/Разблокировать
+                                </a>
                             </div>
                         </td>                        
                     </tr>

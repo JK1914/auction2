@@ -3,14 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\View\View;
-use Illuminate\Validation\ValidationException;
-
 
 class LoginController extends Controller
 {
@@ -36,12 +32,10 @@ class LoginController extends Controller
         ]);
      
         if (!Auth::attempt(array_merge($credentials, ['is_active'=>1]), $request->boolean('remember'))) {
-            throw ValidationException::withMessages([
-                'email' => 'Неверные данные или пользователь заблокирован',
-            ]);
+            return redirect()->route('login')->with('error','Неверные данные, либо пользователь заблокирован администратором!');
         } 
 
-        $request->session()->regenerate();
+        $request->session()->regenerate();        
         return redirect()->intended('/');
     }
 

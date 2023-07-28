@@ -22,8 +22,7 @@ return new class extends Migration
             $table->boolean('is_admin')->default('0');
             $table->boolean('is_active')->default('1');
             $table->float('rating')->nullable();
-            $table->rememberToken();
-            $table->timestamps();
+            $table->rememberToken();           
         });
     }
 

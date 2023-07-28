@@ -34,7 +34,6 @@
                 <div style="width: 200px;">
                     <img src="{{$lot->image_path}}" class="img-fluid img-thumbnail" alt="Тут картинка">
                 </div>
-
             </td>
             <td>{{$lot->description}}</td>
             <td>{{$lot->name}}</td>
@@ -50,7 +49,6 @@
                     @else
                     <div>{{$lot->min_price}}</div>
                     @endauth
-
                 </div>
             </td>
             <td>{{$lot->end_date}}</td>

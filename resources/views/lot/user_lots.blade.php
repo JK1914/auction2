@@ -5,13 +5,7 @@
 <!-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0"> -->
 @if (Route::has('login'))
 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-    @auth
-    <div style="display: inline-block;">
-        <form method="post" action="/logout">
-            @csrf
-            <button class="btn btn-primary">Выход</button>
-        </form>
-    </div>
+    @auth    
     <a href="{{ url('/add') }}" class="btn btn-primary">Добавить</a>
     <a href="{{ url('/users') }}" class="btn btn-primary">Сообщение</a>
     <a href="{{ url('/inbox') }}" class="btn btn-primary">Входящие</a>
@@ -36,7 +30,6 @@
             <th scope="col">Текущая цена</th>
             <th scope="col">Время окончания</th>
             <th scope="col"></th>
-
         </tr>
     </thead>
     <tbody>
@@ -48,7 +41,6 @@
                 <div style="width: 200px;">
                     <img src="{{$lot->image_path}}" class="img-fluid img-thumbnail" alt="Тут картинка">
                 </div>
-
             </td>
             <td>{{$lot->description}}</td>
             <td>{{$lot->min_price}}</td>

@@ -42,6 +42,7 @@ Route::middleware('auth')->group(function () {
     Route::get('lots', [LotController::class, 'index'])->name('lotsIndex');
     Route::post('lots', [LotController::class, 'changePrice']);    
     Route::get('lotswin', [LotController::class, 'lotsWin'])->name('winlots');     
+    Route::get('current', [LotController::class, 'current'])->name('current');     
     Route::get('mylots', [LotController::class, 'myLots'])->name('mylots');
 
     

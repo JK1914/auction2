@@ -41,7 +41,9 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-    ];    
+    ];  
+    
+    public $timestamps = false;
 
     public function lots(){
         return $this->hasMany(Lot::class);
